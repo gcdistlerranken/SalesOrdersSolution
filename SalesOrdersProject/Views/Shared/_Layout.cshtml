@@ -1,0 +1,44 @@
+﻿
+<head>
+    <meta name="viewport" content="width=" device-width" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+
+<style>
+    #wrapper {
+        width: 80%;
+        margin: 20px auto;
+    }
+    header {
+        padding-top: 10px;
+    }
+    li {
+        margin: 10px auto;
+    }
+
+</style>
+
+<body id="wrapper">
+    <div id="header">
+        <h1>The Bike Shop</h1>
+    </div>
+
+    <div id="main">
+        <div style="width: 20%; float: left">
+            <ul>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Home", "Index", "Home")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Shop", "Index", "Shop")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Cart", "Index", "Cart")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Login", "Index", "Login")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Register", "Index", "Register")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("About", "Index", "Home/About")</button></li>
+                <li><button type="button" class="btn btn-light btn-block">@Html.ActionLink("Contact", "Index", "Home/Contact")</button></li>
+            </ul>
+        </div>
+
+        <div style="width: 80%; float: left; padding-left: 40px;">
+            @RenderBody()
+        </div>
+    </div>
+</body>

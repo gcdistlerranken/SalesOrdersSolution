@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "Contact Us";
+}
+<h2>@ViewBag.Title</h2>
+<p class="lead">Please fill out the information below to contact our team:</p>
+
+<form>
+    <div class="form-group">
+        <label for="FirstName">First Name:</label>
+        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="LastName">Last Name:</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="Address">Address:</label>
+        <input type="text" class="form-control" id="address" placeholder="755 Parr Road" required>
+    </div>
+
+    <div class="form-group">
+        <label for="City">City:</label>
+        <input type="text" class="form-control" id="city" placeholder="Wentzville" required>
+    </div>
+
+    <div class="form-group">
+        <label for="State">State</label>
+        <select id="state" class="form-control">
+            <option selected>Please Select Your State...</option>
+            <option>Alabama</option>
+            <option>Alaska</option>
+            <option>Arizona</option>
+            <option>Arkansas</option>
+            <option>California</option>
+            <option>Colorado</option>
+            <option>Connecticut</option>
+            <option>Delaware</option>
+            <option>Florida</option>
+            <option>Georgia</option>
+            <option>Hawaii</option>
+            <option>Idaho</option>
+            <option>Illinois</option>
+            <option>Indiana</option>
+            <option>Iowa</option>
+            <option>Kansas</option>
+            <option>Kentucky</option>
+            <option>Louisiana</option>
+            <option>Maine</option>
+            <option>Maryland</option>
+            <option>Massachusetts</option>
+            <option>Michigan</option>
+            <option>Minnesota</option>
+            <option>Mississippi</option>
+            <option>Missouri</option>
+            <option>Montana</option>
+            <option>Nebraska</option>
+            <option>Nevada</option>
+            <option>New Hampshire</option>
+            <option>New Jersey</option>
+            <option>New Mexico</option>
+            <option>New York</option>
+            <option>North Carolina</option>
+            <option>North Dakota</option>
+            <option>Ohio</option>
+            <option>Oklahoma</option>
+            <option>Oregon</option>
+            <option>Pennsylvania</option>
+            <option>Rhode Island</option>
+            <option>South Carolina</option>
+            <option>South Dakota</option>
+            <option>Tennessee</option>
+            <option>Texas</option>
+            <option>Utah</option>
+            <option>Vermont</option>
+            <option>Virginia</option>
+            <option>Washington</option>
+            <option>Wisconsin</option>
+            <option>Wyoming</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="PostalCode">Postal Code:</label>
+        <input type="text" class="form-control" id="postalCode" placeholder="63385" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CellPhone">Cell Phone:</label>
+        <input type="text" class="form-control" id="cellPhone" placeholder="123-456-7890" required>
+    </div>
+
+    @*Gender*@
+    <div class="form-group">
+        <label>Gender:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="maleGender" id="maleGender" value="male">
+            <label class="form-check-label" for="maleGender">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="femaleGender" id="femaleGender" value="female">
+            <label class="form-check-label" for="femaleGender">Female</label>
+        </div>
+    </div>
+
+    @*Age*@
+    <div class="form-group">
+        <label>Age:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="firstAgeGroup" id="ageGroup1" value="group1">
+            <label class="form-check-label" for="ageGroup1">16-30</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="secondAgeGroup" id="ageGroup2" value="group2">
+            <label class="form-check-label" for="ageGroup2">31-50</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="thirdAgeGroup" id="ageGroup3" value="group3" disabled>
+            <label class="form-check-label" for="ageGroup3">Over 50</label>
+        </div>
+    </div>
+
+    @*Reason For Email*@
+    <div class="form-group">
+        <label>Age:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="newsletter" value="newsletter">
+            <label class="form-check-label" for="Newsletter">Sign up for our Newsletter</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="priceQuote" value="priceQuote">
+            <label class="form-check-label" for="PriceQuote">Ask for a Price Quote</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="appointment" value="appointment">
+            <label class="form-check-label" for="Appointment">Schedule an Appointment</label>
+        </div>
+
+        <div class="text-center">
+            <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
+    </div>
+</form>
