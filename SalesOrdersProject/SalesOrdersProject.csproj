@@ -223,6 +223,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SalesOrdersDatabase2Context.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SHA256.cs" />
     <Compile Include="Models\ShippingInfo.cs" />
     <Compile Include="Models\ShoppingCartModel.cs" />
     <Compile Include="Models\ShoppingCartItemModel.cs" />

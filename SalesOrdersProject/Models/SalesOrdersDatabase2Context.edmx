@@ -25,14 +25,15 @@
           <Property Name="CustomerZipCode" Type="nvarchar" MaxLength="10" />
           <Property Name="CustomerAreaCode" Type="smallint" />
           <Property Name="CustomerPhoneNumber" Type="nvarchar" MaxLength="8" />
+          <Property Name="CustomerEmailAddress" Type="nvarchar" MaxLength="100" />
+          <Property Name="CustomerPassword" Type="nvarchar" MaxLength="50" />
           <Property Name="BillingAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="BillingCity" Type="nvarchar" MaxLength="30" />
-          <Property Name="BillingState" Type="nchar" MaxLength="2" />
+          <Property Name="BillingState" Type="char" MaxLength="2" />
           <Property Name="BillingPostalCode" Type="nvarchar" MaxLength="10" />
           <Property Name="BillingCreditCardNumber" Type="nvarchar" MaxLength="20" />
           <Property Name="BillingExpireMonth" Type="nvarchar" MaxLength="12" />
           <Property Name="BillingExpireYear" Type="nvarchar" MaxLength="4" />
-          <Property Name="Password" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Employees">
           <Key>
@@ -260,12 +261,13 @@
           <NavigationProperty Name="Orders" Relationship="Self.OrdersFK00" FromRole="Customers" ToRole="Orders" />
           <Property Name="BillingAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="BillingCity" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-          <Property Name="BillingState" Type="String" MaxLength="2" FixedLength="true" Unicode="true" />
+          <Property Name="BillingState" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="BillingPostalCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
           <Property Name="BillingExpireMonth" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="BillingExpireYear" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="BillingCreditCardNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerEmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -494,8 +496,9 @@
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="SalesOrdersDatabase2Model.Customer">
               <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="CustomerPassword" ColumnName="CustomerPassword" />
+                <ScalarProperty Name="CustomerEmailAddress" ColumnName="CustomerEmailAddress" />
                 <ScalarProperty Name="BillingCreditCardNumber" ColumnName="BillingCreditCardNumber" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="BillingExpireYear" ColumnName="BillingExpireYear" />
                 <ScalarProperty Name="BillingExpireMonth" ColumnName="BillingExpireMonth" />
                 <ScalarProperty Name="BillingPostalCode" ColumnName="BillingPostalCode" />
