@@ -267,7 +267,6 @@
           <Property Name="BillingExpireYear" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
           <Property Name="BillingCreditCardNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="CustomerEmailAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="CustomerPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -496,7 +495,6 @@
           <EntitySetMapping Name="Customers">
             <EntityTypeMapping TypeName="SalesOrdersDatabase2Model.Customer">
               <MappingFragment StoreEntitySet="Customers">
-                <ScalarProperty Name="CustomerPassword" ColumnName="CustomerPassword" />
                 <ScalarProperty Name="CustomerEmailAddress" ColumnName="CustomerEmailAddress" />
                 <ScalarProperty Name="BillingCreditCardNumber" ColumnName="BillingCreditCardNumber" />
                 <ScalarProperty Name="BillingExpireYear" ColumnName="BillingExpireYear" />

@@ -19,44 +19,44 @@ namespace SalesOrdersProject.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult Index(Customer customer, string returnUrl)
-        {
-            if (ModelState.IsValid)
-            {
-                if(IsValid(customer.CustomerEmailAddress, customer.CustomerPassword))
-                {
-                    FormsAuthentication.SetAuthCookie(customer.CustomerID.ToString(), false);
+        //[HttpPost]
+        //public ActionResult Index(Customer customer, string returnUrl)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        if(IsValid(customer.CustomerEmailAddress, customer.CustomerPassword))
+        //        {
+        //            FormsAuthentication.SetAuthCookie(customer.CustomerID.ToString(), false);
 
-                    if(string.IsNullOrEmpty(returnUrl) || returnUrl.ToLower().Contains("login"))
-                    {
-                        returnUrl = Url.Action("Index", "Home");
-                    }
+        //            if(string.IsNullOrEmpty(returnUrl) || returnUrl.ToLower().Contains("login"))
+        //            {
+        //                returnUrl = Url.Action("Index", "Home");
+        //            }
 
-                    return Redirect(returnUrl);
-                }
-                else
-                {
-                    ModelState.AddModelError("", "The username and/or password is incorrect. Try again.");
+        //            return Redirect(returnUrl);
+        //        }
+        //        else
+        //        {
+        //            ModelState.AddModelError("", "The username and/or password is incorrect. Try again.");
 
-                }
-            }
+        //        }
+        //    }
 
-            return View(customer);
-        }
+        //    return View(customer);
+        //}
 
         public bool IsValid(string Email, string Password)
         {
             string passwordHash = SHA256.Encode(Password);
 
             var data = from c in db.Customers
-                       where ((c.CustomerEmailAddress == Email) &&
-                              c.CustomerPassword == passwordHash)
+                       where ((c.CustomerEmailAddress == Email))
+                             //&& c.CustomerPassword == passwordHash)
                        select new
                        {
                            c.CustomerID,
-                           c.CustomerEmailAddress,
-                           c.CustomerPassword
+                           c.CustomerEmailAddress
+                           //c.CustomerPassword
                        };
 
             return data.Count() > 0;
