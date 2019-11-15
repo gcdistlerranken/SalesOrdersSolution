@@ -31,6 +31,8 @@
         </span>
     </div>
 
+    <br />
+    <br />
     foreach (var item in Model.Products)
     {
         @Html.Partial("Product", item)
@@ -62,7 +64,7 @@
                      categoryID = Model.CategoryID }))
     </div>
 }
-@*<table class="table">
+@*<table class="table-bordered">
         <tr>
             <th>@Html.DisplayNameFor(model => model.ProductName)</th>
             <th>@Html.DisplayNameFor(model => model.ProductDescShort)</th>
