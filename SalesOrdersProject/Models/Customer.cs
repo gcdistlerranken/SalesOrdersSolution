@@ -37,7 +37,7 @@ namespace SalesOrdersProject.Models
         public string BillingExpireYear { get; set; }
         public string BillingCreditCardNumber { get; set; }
         public string CustomerEmailAddress { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }

@@ -62,14 +62,14 @@ namespace SalesOrdersProject.Controllers
             return cart;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public ViewResult ShippingInfo()
         {
             return View(new ShippingInfo());
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public ActionResult ShippingInfo(ShippingInfo shippingInfo)
         {
@@ -86,14 +86,14 @@ namespace SalesOrdersProject.Controllers
             }
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public ViewResult BillingInfo()
         {
             return View(new BillingInfo());
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public ViewResult BillingInfo(BillingInfo billingInfo)
         {

@@ -26,7 +26,6 @@
           <Property Name="CustomerAreaCode" Type="smallint" />
           <Property Name="CustomerPhoneNumber" Type="nvarchar" MaxLength="8" />
           <Property Name="CustomerEmailAddress" Type="nvarchar" MaxLength="100" />
-          <Property Name="CustomerPassword" Type="nvarchar" MaxLength="50" />
           <Property Name="BillingAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="BillingCity" Type="nvarchar" MaxLength="30" />
           <Property Name="BillingState" Type="char" MaxLength="2" />

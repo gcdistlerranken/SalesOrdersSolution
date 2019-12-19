@@ -45,14 +45,22 @@ namespace SalesOrdersProject.Models
         [Required(ErrorMessage = "Please add Billing Credit Card Expire Year")]
         public string ExpireYear { get; set; }
 
-        public SelectList Years()
-        {
-            //Add code to grab current year and go from there 11 years
-            return new SelectList(new string[]
-            {
-                "2019", "2020", "2021", "2022", "2023", "2024",
-                "2025", "2026", "2027", "2028", "2029", "2030"
-            });
-        }
+        //public SelectList Years()
+        //{
+        //    @Html.DropDownList("ExpiryYear", Enumerable.Range(DateTime.Now.Year, 10).Select(x => new SelectListItem { Text = x.ToString() }), "Expiry Year")
+        //    List<KeyValuePair<string, string>> expirationDateYears = new List<KeyValuePair<string, string>>();
+        //    for (int i = 0; i <= 11; i++)
+        //    {
+        //        String year = (DateTime.Today.Year + i).ToString();
+        //        expirationDateYears.Add(new KeyValuePair<string, string>(year, year));
+        //    }
+        //    this.ExpireYear = new SelectList(expirationDateYears, "key", "value", DateTime.Today.Year.ToString());
+        //    //Add code to grab current year and go from there 11 years
+        //    return new SelectList(new string[]
+        //    {
+        //        "2019", "2020", "2021", "2022", "2023", "2024",
+        //        "2025", "2026", "2027", "2028", "2029", "2030"
+        //    });
+        //}
     }
 }

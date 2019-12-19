@@ -18,15 +18,15 @@ namespace SalesOrdersProject.Controllers
             return View(new Customer());
         }
 
-        //[HttpPost]
-        //public RedirectToRouteResult Register(Customer customer)
-        //{
-        //    customer.CustomerPassword = SHA256.Encode(customer.CustomerPassword);
+        [HttpPost]
+        public RedirectToRouteResult Register(Customer customer)
+        {
+            //customer.CustomerPassword = SHA256.Encode(customer.CustomerPassword);
 
-        //    db.Customers.Add(customer);
-        //    db.SaveChanges();
+            db.Customers.Add(customer);
+            //db.SaveChanges();
 
-        //    return RedirectToAction("Index", "Home");
-        //}
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

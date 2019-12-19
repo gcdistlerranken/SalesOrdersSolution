@@ -196,6 +196,7 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Metadata.cs" />
     <Compile Include="Models\Order.cs">
       <DependentUpon>SalesOrdersDatabase2Context.tt</DependentUpon>
     </Compile>
@@ -203,6 +204,7 @@
       <DependentUpon>SalesOrdersDatabase2Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PaginationModel.cs" />
+    <Compile Include="Models\PartialClasses.cs" />
     <Compile Include="Models\Product.cs">
       <DependentUpon>SalesOrdersDatabase2Context.tt</DependentUpon>
     </Compile>

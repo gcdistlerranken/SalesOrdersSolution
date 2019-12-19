@@ -8,38 +8,38 @@
 {
     @Html.ValidationSummary()
 
-    <h3>Register</h3>
+    <h2>Register</h2>
 
     <div class="form-group">
         <label>First Name</label>
-        @Html.TextBoxFor(x => x.CustomerFirstName, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerFirstName, new { placeholder = "First Name", @class = "form-control inputbox" })
         <label>Last Name</label>
-        @Html.TextBoxFor(x => x.CustomerLastName, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerLastName, new { placeholder = "Last Name", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Address</label>
-        @Html.TextBoxFor(x => x.CustomerStreetAddress, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerStreetAddress, new { placeholder = "755 Parr Road", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>City</label>
-        @Html.TextBoxFor(x => x.CustomerCity, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerCity, new { placeholder = "Wentzville", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
-        <label>State</label>
-        @Html.TextBoxFor(x => x.CustomerState, new { @class = "form-control" })
+        <label>State (2 Letter Abbreviation)</label>
+        @Html.TextBoxFor(x => x.CustomerState, new { placeholder = "MO", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Postal Code</label>
-        @Html.TextBoxFor(x => x.CustomerZipCode, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerZipCode, new { placeholder = "63385", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
             <label>Email Address (Used as User Name)</label>
-            @Html.TextBoxFor(x => x.CustomerStreetAddress, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.CustomerEmailAddress, new { placeholder = "Email Address", @class = "form-control inputbox" })
         </div>
 
         @*<div class="form-group">

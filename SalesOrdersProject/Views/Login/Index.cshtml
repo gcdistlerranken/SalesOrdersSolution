@@ -4,7 +4,7 @@
     ViewBag.Title = "Login User";
 }
 
-<h3>Login:</h3>
+<h2>Login:</h2>
 
 @using (Html.BeginForm("Index", "Login"))
 {
@@ -14,7 +14,7 @@
 
     <div class="form-group">
         <label>Email Address</label>
-        @Html.TextBoxFor(x => x.CustomerEmailAddress, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CustomerEmailAddress, new { @class = "form-control inputbox" })
     </div>
 
     @*<div class="form-group">

@@ -14,15 +14,16 @@
     @Html.HiddenFor(x => x.Pagination.TotalItems)
 
     <div>
-        Category:
-        @Html.DropDownListFor(x => x.CategoryID,
-                              Model.Categories(),
-                              "--Select a Category--",
-        new
-        {
-            onchange = "document.getElementById('ShopForm').submit();"
-        })
-
+        <div id="category-box">
+            Category:
+            @Html.DropDownListFor(x => x.CategoryID,
+                                  Model.Categories(),
+                                  "--Select a Category--",
+            new
+            {
+                onchange = "document.getElementById('ShopForm').submit();"
+            })
+        </div>
         <span>
             Search For:
             @Html.TextBoxFor(x => x.SearchString)
@@ -60,8 +61,11 @@
     }
 
     <div class="pager">
-        @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new { page = x,
-                     categoryID = Model.CategoryID }))
+        @Html.PageLinks(Model.Pagination, x => Url.Action("Index", new
+        {
+            page = x,
+                     categoryID = Model.CategoryID
+        }))
     </div>
 }
 @*<table class="table-bordered">

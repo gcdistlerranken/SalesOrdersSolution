@@ -12,43 +12,44 @@
 
     <div class="form-group">
         <label>First Name</label>
-        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.FirstName, new { placeholder = "First Name", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Last Name</label>
-        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.LastName, new { placeholder = "Last Name", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Credit Card Number</label>
-        @Html.TextBoxFor(x => x.CreditCardNumber, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.CreditCardNumber, new { placeholder = "1234567890123456", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Expiration Date</label>
         @Html.DropDownListFor(x => x.ExpireMonth, Model.Months(), "--Expire Month--", new { @class = "" })
-        @Html.DropDownListFor(x => x.ExpireYear, Model.Months(), "--Expire Year--", new { @class = "" })
+        @*@Html.DropDownListFor(x => x.ExpireYear, Model.Years(), "--Expire Year--", new { @class = "" })*@
+        @Html.DropDownListFor(x=> x.ExpireYear, Enumerable.Range(DateTime.Now.Year, 12).Select(x => new SelectListItem { Text = x.ToString() }), "--Expire Year--", new { @class = "" })
     </div>
 
     <div class="form-group">
         <label>Address</label>
-        @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.Address, new { placeholder = "755 Parr Road", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>City</label>
-        @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.City, new { placeholder = "Wentzville", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>State</label>
-        @Html.TextBoxFor(x => x.State, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.State, new { placeholder = "MO", @class = "form-control inputbox" })
     </div>
 
     <div class="form-group">
         <label>Postal Code</label>
-        @Html.TextBoxFor(x => x.PostalCode, new { @class = "form-control" })
+        @Html.TextBoxFor(x => x.PostalCode, new {placeholder = "63385",  @class = "form-control inputbox" })
     </div>
 
     <div class="text-center">

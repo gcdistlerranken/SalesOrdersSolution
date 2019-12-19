@@ -1,15 +1,16 @@
 ﻿@model SalesOrdersProject.Models.Product
 
     <div style="display: inline-block">
-        <div style="width: 30%; float: left;">
+        <div id="product-img" >
             <img src="@Url.Content(Model.ProductImage)"
                  width="200"
                  height="150"
                  alt="@Model.ProductName"
-                 title="@Model.ProductName" />
+                 title="@Model.ProductName"
+                 class="img-fluid"/>
         </div>
 
-        <div style="width: 70%; float: left;">
+        <div id="product-desc">
             <h3>@Html.DisplayFor(modelModel => Model.ProductName)</h3>
 
             <p>@Html.DisplayFor(modelModel => Model.ProductDescShort)</p>
@@ -22,5 +23,6 @@
                 @Html.ActionLink("More Info", "Index", "ItemDetails",
                              new { id = Model.ProductID }, new { id = "ProductID" })
             </p>
+            <br />
         </div>
     </div>
